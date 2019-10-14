@@ -1,8 +1,8 @@
-name:                ivy
+name:                paper-processor
 version:             0.1.0.0
 #synopsis:
 #description:
-homepage:            https://github.com/githubuser/ivy#readme
+homepage:            https://github.com/githubuser/paper-processor#readme
 license:             BSD3
 author:              Rohit Ramesh
 maintainer:          rkr@berkeley.edu
