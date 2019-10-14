@@ -58,6 +58,15 @@ tests:
     dependencies:
       - ivy
 
+executables:
+  paper-processor:
+    main: Processor.hs
+    source-dirs:
+      - app
+    dependencies:
+      - paper-processor
+
+
 default-extensions:
   NoImplicitPrelude
   ApplicativeDo
