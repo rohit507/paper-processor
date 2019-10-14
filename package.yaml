@@ -1,0 +1,133 @@
+name:                ivy
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/githubuser/ivy#readme
+license:             BSD3
+author:              Rohit Ramesh
+maintainer:          rkr@berkeley.edu
+copyright:           2019 Rohit Ramesh
+#category:
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - intro
+  # - text
+  # - tasty
+  # - tasty-discover
+  # - tasty-hunit
+  # - tasty-hedgehog
+  # - hedgehog
+  # - free
+  # - lens
+  # - containers
+  # - monad-control
+  # - unordered-containers
+  # - constraints
+  # - recursion-schemes
+  # - data-reify
+  # - type-map
+  # - bimap
+  # - these
+  # - concurrent-supply
+  # - newtype
+  # - algebraic-graphs
+  # - logging
+  # - operational
+  # - logict
+  # - mmorph
+  # - template-haskell
+  # - prettyprinter
+  # - data-partition
+
+library:
+  source-dirs: src
+  # exposed-modules:
+  #  - Ivy.Prelude
+  #  - Ivy.MonadClasses
+  #  - Ivy.IntBindT
+
+tests:
+  tasty:
+    main: TastyDriver.hs
+    source-dirs:
+      - test
+      # - src
+    dependencies:
+      - ivy
+
+default-extensions:
+  NoImplicitPrelude
+  ApplicativeDo
+  BangPatterns
+  ConstraintKinds
+  DataKinds
+  DefaultSignatures
+  DeriveDataTypeable
+  DeriveFoldable
+  DeriveFunctor
+  DeriveGeneric
+  DeriveLift
+  DeriveTraversable
+  DerivingStrategies
+  DuplicateRecordFields
+  EmptyCase
+  EmptyDataDecls
+  ExistentialQuantification
+  ExtendedDefaultRules
+  FlexibleContexts
+  FlexibleInstances
+  FunctionalDependencies
+  GADTs
+  GeneralizedNewtypeDeriving
+  ImplicitParams
+  InstanceSigs
+  KindSignatures
+  LambdaCase
+  MultiParamTypeClasses
+  MultiWayIf
+  NamedFieldPuns
+  NoImplicitPrelude
+  NoMonomorphismRestriction
+  OverloadedLabels
+  OverloadedLists
+  OverloadedStrings
+  PackageImports
+  PatternSynonyms
+  PolyKinds
+  QuasiQuotes
+  QuantifiedConstraints
+  RankNTypes
+  RecordWildCards
+  RecursiveDo
+  ScopedTypeVariables
+  StandaloneDeriving
+  TemplateHaskell
+  TupleSections
+  TypeApplications
+  TypeFamilies
+  TypeFamilyDependencies
+  TypeOperators
+  ViewPatterns
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -Werror
+  # Some of the flags enabled by Wall and propmoted by Werror really should
+  # only be warnings when developing. A proper build on the other hand should
+  # have no warnings attached
+  - -Wwarn=name-shadowing
+  - -Wwarn=orphans
+  - -Wwarn=redundant-constraints
+  - -Wwarn=typed-holes
+  - -Wwarn=unused-matches
+  - -Wwarn=deprecations
+  - -Wwarn=unused-local-binds    # TODO :: Re-enable for cleaning
+  - -Wwarn=unused-imports        # TODO :: Re-enable for cleaning
+  - -Wwarn=redundant-constraints # TODO :: Re-enable for cleaning
