@@ -14,33 +14,15 @@ extra-source-files:
 dependencies:
   - base >= 4.7 && < 5
   - intro
-  # - text
-  # - tasty
-  # - tasty-discover
-  # - tasty-hunit
-  # - tasty-hedgehog
-  # - hedgehog
-  # - free
-  # - lens
-  # - containers
-  # - monad-control
-  # - unordered-containers
-  # - constraints
-  # - recursion-schemes
-  # - data-reify
-  # - type-map
-  # - bimap
-  # - these
-  # - concurrent-supply
-  # - newtype
-  # - algebraic-graphs
-  # - logging
-  # - operational
-  # - logict
-  # - mmorph
-  # - template-haskell
-  # - prettyprinter
-  # - data-partition
+  - shake
+  - cassava
+  - scalpel
+  - conduit
+  - conduit-extra
+  - http-conduit
+  - http-conduit-downloader
+  - persistent
+  - persistent-sqlite
 
 library:
   source-dirs: src
